@@ -190,12 +190,6 @@ def main():
         )
         adv_passages.extend(results)
 
-    # inverter only
-    # inverter = vec2text.models.InversionModel.from_pretrained(
-    #     '/scratch/project/neural_ir/arvin/vec2text-reproduce/saves/checkpoint-93750').to('cuda')
-    # generation = inverter.generate({'frozen_embeddings': centroids}, {})
-    # adv_passages = tokenizer.batch_decode(generation, skip_special_tokens=True)
-
     with torch.no_grad():
         adv_passage_input = tokenizer(adv_passages,
                                       padding=True,
