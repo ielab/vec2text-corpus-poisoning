@@ -123,9 +123,9 @@ def main():
     c_model.eval()
     c_model.to(device)
     inversion_model = vec2text.models.InversionModel.from_pretrained(
-        '/scratch/project/neural_ir/arvin/vec2text-reproduce/saves/gtr_base_st-embed/checkpoint-133375').to(device)
+        'xxx/gtr_base_st-embed/checkpoint-133375').to(device)
     correct_model = vec2text.models.CorrectorEncoderModel.from_pretrained(
-        '/scratch/project/neural_ir/arvin/vec2text-reproduce/saves/gtr_base_st-embed-corrector-1/checkpoint-348000').to(
+        'xxx/gtr_base_st-embed-corrector-1/checkpoint-348000').to(
         device)
 
     inversion_trainer = vec2text.trainers.InversionTrainer(
